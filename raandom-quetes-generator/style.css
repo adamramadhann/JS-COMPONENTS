@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fecfef);
+}
+
+h1 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    /* styling */
+    width: 600px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* dislpay */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+#quote {
+    font-size: 20px;
+    user-select: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out,  transform 0.5s ease-in-out ;
+}
+
+#quote.show {
+    opacity: 1;
+}
+
+button {
+    padding: 10px 50px 10px 50px;
+    transition: all 0.2s ease;
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    box-shadow: 0 px 6px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+button:active {
+    transform: scale(0.9);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+}
+
+/* Love effect */
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    clip-path: polygon(
+        50% 0%, 100% 30%, 100% 60%, 
+        50% 100%, 0% 60%, 0% 30%
+    );
+    animation: float 1s ease-out forwards;
+}
+
+
+@keyframes float {
+    0% {
+        opacity: 1;
+        transform: scale(0.6) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1) translateY(-50px);
+    }
+}
+
+
+@media (max-width: 400px) {
+    section {
+        width: 300px;
+        height: 150px;
+    }
+
+    #quote {
+        font-size: 10px;
+    }
+
+    button {
+        padding: 8px 30px 8px 30px;
+        background-color: blue;
+        border-radius: 8px;
+        font-size: 10px;
+    }
+}
