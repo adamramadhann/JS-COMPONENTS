@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.quiz-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.quiz-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.1) ;
+    text-align: center;
+    width: 300px;
+}
+
+#options {
+    margin: 20px 0;
+    display: grid;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.correct {
+    background-color: green; /* Warna hijau untuk jawaban benar */
+    color: white;
+}
+
+.wrong {
+    background-color: red; /* Warna merah untuk jawaban salah */
+    color: white;
+}
